@@ -1,0 +1,17 @@
+=== LAPORAN KOMUNIKASI HASIL ANALISIS ===
+Model Terbaik: GradientBoostingClassifier
+----------------------------------------
+1. PERFORMA MODEL
+   - Akurasi (73.4%): Seberapa sering model memprediksi dengan benar secara keseluruhan.
+   - Recall (61.9%): Kemampuan model mendeteksi pasien yang BENAR-BENAR terkena serangan jantung.
+     (Penting dalam medis: Kita tidak ingin melewatkan pasien yang sakit).
+   - Precision (68.7%): Dari pasien yang diprediksi sakit, berapa persen yang benar-benar sakit.
+
+2. INSIGHT UTAMA
+   - Faktor risiko paling dominan adalah: 'previous_heart_disease'.
+   - 10 fitur teratas pada grafik 'viz_feature_importance.png' harus menjadi perhatian utama.
+
+3. REKOMENDASI DAN RENCANA TINDAK LANJUT
+   - Gunakan model ini sebagai alat 'Early Warning System' di fasilitas kesehatan.
+   - Pasien dengan nilai indikator 'previous_heart_disease' yang tinggi harus segera mendapatkan pemeriksaan lanjutan.
+   - Lakukan validasi medis lebih lanjut terhadap hasil prediksi positif untuk mengurangi kecemasan pasien (jika False Positive).

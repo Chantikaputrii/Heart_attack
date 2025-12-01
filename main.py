@@ -1,6 +1,3 @@
-# main.py
-# Menjalankan seluruh proses: Data Mining → Cleaning → EDA → Feature Engineering
-
 import sys
 
 # Tambahkan folder "src" agar modul bisa ditemukan
@@ -11,6 +8,8 @@ from data_cleaning import run_cleaning
 from data_exploration import run_eda
 from feature_engineering import run_feature_engineering
 from modeling import run_modeling
+# [BARU] Import modul visualization
+from data_visualization import run_visualization
 
 def main():
     print("\n==============================")
@@ -22,12 +21,20 @@ def main():
 
     print("\n>> Menjalankan Data Cleaning...\n")
     run_cleaning()
+    
+    # Anda bisa mengaktifkan kembali EDA jika diperlukan
+    # print("\n>> Menjalankan Data Exploration (EDA)...\n")
+    # run_eda()
 
     print("\n>> Menjalankan Feature Engineering...\n")
     run_feature_engineering()
 
     print("\n>> Menjalankan Predictive Modeling...\n")
     run_modeling()
+
+    # [BARU] Menjalankan tahap 8: Visualisasi & Komunikasi
+    print("\n>> Menjalankan Data Visualization & Communication...\n")
+    run_visualization()
 
     print("\n==============================")
     print("   SEMUA PROSES SUKSES JALAN ")
